@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/txt_login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="5dp"
+        android:text="@string/log_in"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_icons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_login_title">
+
+        <ImageView
+            android:id="@+id/img_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/facebook" />
+
+        <ImageView
+            android:id="@+id/img_googe"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/googleplus" />
+
+        <ImageView
+            android:id="@+id/img_instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/instagram" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_lineAndOr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_icons">
+
+        <TextView
+            android:id="@+id/txt_line"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="80dp"
+            android:layout_weight="2"
+            android:background="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/txt_or"
+            android:layout_width="5sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="OR"
+            android:textSize="16dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/txt_line2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginRight="80dp"
+            android:layout_weight="2"
+            android:background="@color/colorBlack" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/edt_txt_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/username"
+        android:drawableStart="@drawable/customer"
+        android:drawablePadding="5dp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_lineAndOr" />
+
+    <EditText
+        android:id="@+id/edt_txt_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textWebPassword"
+        android:hint="@string/password"
+        android:drawableStart="@drawable/key"
+        android:drawablePadding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_txt_username"
+        app:layout_constraintStart_toStartOf="@+id/edt_txt_username"
+        app:layout_constraintTop_toBottomOf="@+id/edt_txt_username"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/txt_forgetpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8sp"
+        android:text="@string/forget_password"
+        android:textSize="11sp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@+id/edt_txt_password"
+        app:layout_constraintTop_toBottomOf="@+id/edt_txt_password"
+        tools:ignore="SmallSp" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="@string/log_in"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_forgetpassword"
+        app:layout_constraintStart_toStartOf="@+id/edt_txt_password"
+        app:layout_constraintTop_toBottomOf="@+id/txt_forgetpassword" />
+
+
+    <TextView
+        android:id="@+id/txt_singuptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dont_have_a_account"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/txt_singup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/sign_up"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_singuptext"
+        app:layout_constraintStart_toEndOf="@+id/txt_singuptext"
+        app:layout_constraintTop_toTopOf="@+id/txt_singuptext" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
